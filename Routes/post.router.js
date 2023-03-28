@@ -10,7 +10,7 @@ PostRouter.get("/", async (req, res) => {
   const { userID } = req.body;
   let posts = [];
   try {
-    if (min !== null && max !== null) {
+    if (min != null && max != null) {
       posts = await PostModel.find({
         $and: [
           { userID },
